@@ -204,6 +204,12 @@
 % Redefine the title of the ToC to be empty
 \renewcommand{\contentsname}{} % Remove the "Contents" title
 
+% Insert a custom horizontal line after the ToC title
+\newcommand{\tocline}{%
+    \noindent\rule{\linewidth}{0.4pt} % Creates a horizontal line
+    \vspace{0.5cm} % Optional: space after the line
+}
+
 % Comment both of the following lines to have the LOF and the LOT on different pages
 %\let\cleardoublepage\bigskip
 %\let\clearpage\bigskip
