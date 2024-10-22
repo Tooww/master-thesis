@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile document
-pdflatex -interaction=nonstopmode main
+pdflatex -interaction=nonstopmode main.tex
 
 # Compile nomenclature
 makeindex main.nlo -s nomencl.ist -o main.nls
