@@ -17,7 +17,7 @@ And of course a control and data transmission system.
 
 \section{Systems design}
 
-The controlled Environment systems consists takes the form of a closed box, isolated from external climatic conditions. this box is where the inoculated substrate for mycelium growth is placed: “Mycelium grow space”. 
+The controlled Environment systems takes the form of a closed box, isolated from external climatic conditions. this box is where the inoculated substrate for mycelium growth is placed: “Mycelium grow space”. 
 The Mycelium grow space is instrumented with climate sensors. in this case a relative humidity sensor, a temperature sensor and a carbon dioxide sensor. they are connected to an ESP-type microcontroller which handles data reading.
 The ESP will then send the data via an MQTT protocol to a RaspberryPI acting as an MQTT broker and server for an Influx database. The data can then be visualized via a dashboard on a user's computer. 
 
