@@ -73,12 +73,13 @@ The fogger is immersed in the water in the reservoir. When the fogger and fan ar
 The electrical panel manages all the electrical or electronic parts of the project. In other words, the power supply, the microcontroller and the relays that control the various climatic actuators. The electrical panel is connected via a mains socket to power the entire system.
 
 Everything was placed on a large board overlaid with wheels for ease of movement. 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics{images/Myceliummachine.png}
-%     \caption{System design representation}
-%     \label{fig:}
-% \end{figure} 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/myceliummachine.png}
+    \caption{Environment controlled for mycelium picture}
+    \label{fig:Mycemachinne}
+\end{figure} 
 
 
 The mycelium used was ganoderma lucidum, also known as reishi, the most widely used mushroom in the literature.\cite{yang2021material}
@@ -89,6 +90,25 @@ And combination mixes of its substrates.
 
 In addition, the direction of the fibers in the substrate also affects the mechanical properties. In other word fibrous substrates may have greater mechanical properties or the opposite, depending on how they were placed in the substrate.
 
+\paragraph{Software}
+There are 2 programs for the project. the program on the esp that reads the data, activates or deactivates the relays, and sends the data to the servers on the rasberry. 
+And the program on the raspberry which receives the data and displays it via a dashboard in an influxDB database. 
+
+On the ESP, the main user chooses the climatic variables for activating and deactivating the climatic actuator. In other words, the user chooses the climatic variables in which the system will be located. For example, for relative humidity, if the user chooses that the environment to be controlled should be between 80\% and 90\% humidity. Then when the humidity sensor reads that the humidity is below 80\%, ESP will activate (via the relays) the climatic actuators responsible for humidity control, i.e. the fogger and fan. Afterwards, ESP will deactivate the actuators once the sensor returns a humidity above 90\%.
+
+It will be the same for the control of other climatic variables. 
+
+In pallalele, the data read by the sensors will be sent via MQTT to an influx database on hermger on a raspberry. 
+Influxdb is a database management system. in particular, it can be used to create dashboards, which can be used to monitor sensor data directly from a computer connected to the database. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/laptopdashboard.png}
+    \caption{dashboard of mycelium controlled environent}
+    \label{fig:Mycemachinne}
+\end{figure} 
+
+\paragraph{hardware}
 
 \subsection{Modular environmental control}
 
@@ -118,6 +138,16 @@ photo avant apres demontage ???????
 
 
 \section{Result}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/resultMyce.png}
+    \caption{Mycelium based materials with different substate}
+    \label{fig:Mycemachinne}
+\end{figure} 
+
+
 \subsection{Mechanical test}
 
 
