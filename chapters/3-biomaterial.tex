@@ -114,7 +114,9 @@ Influxdb is a database management system. in particular, it can be used to creat
 In material terms, the system can be divided into several categories of subsystems. 
 Each subsystem is made up of several parts that perform the same type of function (measuring, controlling, managing climatic conditions...). 
 
-\textbf{The climatic actuators} are among the most important parts of the system, as they determine the climatic conditions in the growth chamber. 
+\textbf{The climatic actuators} 
+
+The climatic actuators are among the most important parts of the system, as they determine the climatic conditions in the growth chamber. 
 
 The relative humidity control system consists of two parts: a fogger and a centrifugal fan,both located in the water tank. 
 The fogger is placed directly in the water; when switched on, it vibrates a ceramic cell, producing a fog on the surface of the water. 
@@ -149,7 +151,26 @@ For CO2 and air renewal. The system simply consists of a conventional fan and a 
 
 \textbf{The sensors}
 
+Sensors are twinned with climate actuators, so there are as many sensors as climate variables being controlled. 
+Several sensors have been tested. The sensor must be able to operate in conditions of high relative humidity, it must also be sufficiently accurate and robust over time and the sensor must be able to read the climatic data quickly in order to have the most direct measurements. 
+
+So there's a carbon dioxide sensor, a relative humidity sensor and a temperature sensor. 
+In order to facilitate sensor integration, a 3-in-1 sensor was chosen, allowing simultaneous measurement of temperature, humidity and carbon dioxide concentration. 
+For carbon dioxide, the reading must be at least equal to or greater than 5000 ppm to best control mycelium growth. 
+
 \textbf{The contoller}
+
+If the climatic actuator and sensors are respectively the hands and eyes of the system, then the ESP, the microcontroller, is the brain. 
+
+The microcontroller's role is to activate and deactivate the relays connected to the climatic actuators according to the data received from the sensors. 
+
+On the other hand, the microcontroller's role is to send sensor data to the raspberry for the dashboard. 
+
+\textbf{Dashboard}
+
+\textbf{Limit}
+
+\textbf{Future work}
 
 \subsection{Modular environmental control}
 
@@ -169,12 +190,6 @@ Which makes it easy to centralize several contrasting environments around the ta
 
 %%%%%% photo avant apres demontage 
 photo avant apres demontage ???????
-
-
-
-
-
-
 
 
 
