@@ -91,6 +91,7 @@ And combination mixes of its substrates.
 In addition, the direction of the fibers in the substrate also affects the mechanical properties. In other word fibrous substrates may have greater mechanical properties or the opposite, depending on how they were placed in the substrate.
 
 \paragraph{Software}
+
 There are 2 programs for the project. the program on the esp that reads the data, activates or deactivates the relays, and sends the data to the servers on the rasberry. 
 And the program on the raspberry which receives the data and displays it via a dashboard in an influxDB database. 
 
@@ -109,6 +110,46 @@ Influxdb is a database management system. in particular, it can be used to creat
 \end{figure} 
 
 \paragraph{hardware}
+
+In material terms, the system can be divided into several categories of subsystems. 
+Each subsystem is made up of several parts that perform the same type of function (measuring, controlling, managing climatic conditions...). 
+
+\textbf{The climatic actuators} are among the most important parts of the system, as they determine the climatic conditions in the growth chamber. 
+
+The relative humidity control system consists of two parts: a fogger and a centrifugal fan,both located in the water tank. 
+The fogger is placed directly in the water; when switched on, it vibrates a ceramic cell, producing a fog on the surface of the water. 
+When the centrifugal fan is switched on, it will create a flow of air changed from the fog created by the fogger, which will come out of the water tank through a pipe connected to the growth chamber, increasing the humidity in the space. 
+
+To increase humidity in the growth chamber. The choice of the fogger and the centifugal fan is justified by their simplicity of implementation. In fact, the fogger's adventage compares with drip systems or a pressurized water system which would require more hardware, and which limits the possibility of stagnation of water in liquid form and therefore contamination. 
+
+The temperature is controlled by a heating mat placed in the growth chamber. The heating mat is made up of heating resistors which, when energized, produce heat by convection as they move the air, and also by radiation. 
+
+Once again, this system was chosen for its ease of installation, and because it heats the growth chamber homogeneously. 
+
+For CO2 and air renewal. The system simply consists of a conventional fan and a filter upstream of the fan.  The fan will push the air into the push space. The advantage of pushing the air inside rather than pulling the air to be renewed outside is that it creates a positive pressure differential between the push chamber and the outside. In this way, ambient air will only enter through the filter, rather than through possible insulation gaps. 
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{images/Myceliummachine.png}
+%     \caption{System design representation}
+%     \label{fig:}
+% \end{figure} 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{images/Myceliummachine.png}
+%     \caption{System design representation}
+%     \label{fig:}
+% \end{figure} 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics{images/Myceliummachine.png}
+%     \caption{System design representation}
+%     \label{fig:}
+% \end{figure} 
+
+\textbf{The sensors}
+
+\textbf{The contoller}
 
 \subsection{Modular environmental control}
 
