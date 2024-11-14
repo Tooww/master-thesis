@@ -109,7 +109,7 @@ Influxdb is a database management system. in particular, it can be used to creat
     \label{fig:Mycemachinne}
 \end{figure} 
 
-\paragraph{hardware}
+\paragraph{Hardware}
 
 In material terms, the system can be divided into several categories of subsystems. 
 Each subsystem is made up of several parts that perform the same type of function (measuring, controlling, managing climatic conditions...). 
@@ -167,6 +167,7 @@ The microcontroller's role is to activate and deactivate the relays connected to
 On the other hand, the microcontroller's role is to send sensor data to the raspberry for the dashboard. 
 
 \textbf{Dashboard}
+
 The dashboard is not mandatory for the proper operation of the system for growing and manufacturing composite mycelium.
 However, it is an important element in the monitoring and collection of data. It provides a live view of the state of the system, and therefore shows if the system is not in the right climatic condition, in the event of a sub-system failure for example.  
 
@@ -176,7 +177,17 @@ Via the carbon dioxide sensor, just after an air renewal cycle, the carbon dioxi
 The dashboard is instantiated by an influx database, which enables native dashboard implementation. influxDB is a database management solution, notably temporal, which is the case for the data sent by esp, which are displayed as a function of time. 
 the server and database are hosted on a raspberry, which also acts as an MQTT broker, enabling data to be received from other systems. 
 
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/CO2dashboard.png}
+    \caption{dioxide of carbon concentration evolution in ppm}
+    \label{fig:}
+\end{figure} 
+
+
 \textbf{Limit}
+
+
 
 \textbf{Future work}
 
@@ -199,7 +210,16 @@ Which makes it easy to centralize several contrasting environments around the ta
 %%%%%% photo avant apres demontage 
 photo avant apres demontage ???????
 
+\paragraph{Software}
 
+same but mqtt multiple controled env  
+\paragraph{Hardware}
+
+almost same but vmc pour RH 
+\textbf{The climatic actuators} 
+\textbf{The sensors}
+\textbf{The contoller}
+\textbf{Dashboard}
 
 \section{Result}
 
