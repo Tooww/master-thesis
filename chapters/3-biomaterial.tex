@@ -167,6 +167,14 @@ The microcontroller's role is to activate and deactivate the relays connected to
 On the other hand, the microcontroller's role is to send sensor data to the raspberry for the dashboard. 
 
 \textbf{Dashboard}
+The dashboard is not mandatory for the proper operation of the system for growing and manufacturing composite mycelium.
+However, it is an important element in the monitoring and collection of data. It provides a live view of the state of the system, and therefore shows if the system is not in the right climatic condition, in the event of a sub-system failure for example.  
+
+It also provides an imprecise live view of the mycelium biomass in the growth chamber.
+Via the carbon dioxide sensor, just after an air renewal cycle, the carbon dioxide level in the growth chamber is at ambient level. by looking at the slope of the carbon dioxide rise curve, we can deduce the approximate mycelium biomass. 
+
+The dashboard is instantiated by an influx database, which enables native dashboard implementation. influxDB is a database management solution, notably temporal, which is the case for the data sent by esp, which are displayed as a function of time. 
+the server and database are hosted on a raspberry, which also acts as an MQTT broker, enabling data to be received from other systems. 
 
 \textbf{Limit}
 
