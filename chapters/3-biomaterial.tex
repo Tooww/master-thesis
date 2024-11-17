@@ -8,12 +8,6 @@ One of this project focus more on monitoring un data management, the other one i
 In both cases, we're talking about controlled-environment systems with a closed space, thermal resistance or heating mats, temperature sensors, humidity modulators and associated relative humidity sensors, carbon dioxide sensors and fans for air renewal and circulation. 
 And of course a control and data transmission system. 
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics{images/Myceliummachine.png}
-%     \caption{System design representation}
-%     \label{fig:}
-% \end{figure} 
 
 \section{Systems design}
 
@@ -130,24 +124,20 @@ Once again, this system was chosen for its ease of installation, and because it 
 
 For CO2 and air renewal. The system simply consists of a conventional fan and a filter upstream of the fan.  The fan will push the air into the growth space. The advantage of pushing the air inside rather than pulling the air to be renewed outside is that it creates a positive pressure differential between the growth chamber and the outside. In this way, ambient air will only enter through the filter, rather than through possible insulation gaps. 
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics{images/Myceliummachine.png}
-%     \caption{System design representation}
-%     \label{fig:}
-% \end{figure} 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics{images/Myceliummachine.png}
-%     \caption{System design representation}
-%     \label{fig:}
-% \end{figure} 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics{images/Myceliummachine.png}
-%     \caption{System design representation}
-%     \label{fig:}
-% \end{figure} 
+\begin{marginfigure}
+    \centering
+    \includegraphics{images/IMG_6789-removebg-preview(1).png}
+    \caption{Ultrasonic fogger}
+    \label{fig:fogger}
+\end{marginfigure}
+
+
+\begin{marginfigure}
+    \centering
+    \includegraphics{images/IMG_3077.jpg}
+    \caption{heating mat isinde growth space}
+    \label{fig:heatingmat}
+\end{marginfigure}
 
 \textbf{The sensors}
 
@@ -185,14 +175,12 @@ the server and database are hosted on a raspberry, which also acts as an MQTT br
 \end{figure} 
 
 
-\textbf{electrical and flux diagram of the system }
+%\textbf{electrical and flux diagram of the system }
 
-diag diag diag
+%diag diag diag
 
-\textbf{Limit}
+%\textbf{Limit}
 
-
-\textbf{Future work}
 
 \subsection{Modular environmental control}
 
@@ -212,15 +200,19 @@ Which makes it easy to centralize several contrasting environments around the ta
 
 
 
-%%%%%% photo avant apres demontage 
-photo avant apres demontage ???????
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/IMG_6790.jpg}
+    \caption{Modular environmental control disassembled}
+    \label{fig:coussinavap}
+\end{figure}
 %%%%%% photo avant apres demontage 
 
 \paragraph{Software}
 
 The data transmission system operates similarly to the approach described in section 3.4.1, but has been streamlined to accommodate additional growth chambers within the same network. Here, a Raspberry Pi serves as the MQTT broker, efficiently managing data flow for multiple chambers. MQTT, or Message Queuing Telemetry Transport, is a publish-subscribe communication protocol designed for lightweight data exchange, making it ideal for managing data between sensors and multiple devices.
 
-In this system, devices can act as either publishers or subscribers. Publishers—such as the various growth systems with sensors monitoring temperature, humidity, and CO₂ levels—send data packets to the broker. Subscribers, such as laptops or user interfaces, can then "subscribe" to specific data streams and receive updates on the conditions within specific chambers.
+In this system, devices can act as either publishers or subscribers. Publishers—such as the various growth systems with sensors monitoring temperature, humidity, and carbon dioxide levels—send data packets to the broker. Subscribers, such as laptops or user interfaces, can then "subscribe" to specific data streams and receive updates on the conditions within specific chambers.
 
 The broker, by centralizing data flow, allows multiple user devices to monitor data from any sensor without needing to interface with each device individually. This not only simplifies scalability by enabling more growth chambers to be added to the system without extensive reconfiguration, but it also gives users flexibility in viewing specific data streams from particular chambers. Moreover, this setup allows for real-time adjustments, since subscribers can quickly access and act on sensor data, optimizing the control environment for bacterial cellulose or mycelium growth with minimal latency.
 
@@ -242,15 +234,19 @@ The advantage is that even if there are several push chambers, only one fogger i
 Custom PVC cushions were specifically crafted for this project using a straightforward yet effective approach. By taking two sheets of PVC and welding their edges together, a sealed cushion is created. PVC’s natural adhesiveness simplifies this process—no additional fastening mechanisms are needed to achieve a functional opening.
 To incorporate an accessible opening and closing mechanism, the welding process can be left incomplete along a small section of one end, allowing it to act as a “self-sealing” closure. This practical feature makes the cushions easy to fill and empty without additional components, offering versatility in applications ranging from soft support structures to experimental, inflating elements for various settings. Moreover, this design approach leverages PVC’s durability, which enhances resistance to wear, making these cushions reusable and adaptable to different environments.
 
-%%%%%% photo avant apres demontage 
-photo coussin ???????
-%%%%%% photo avant apres demontage 
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/IMG_6791.png}
+    \caption{PVC cushions fill and empty}
+    \label{fig:coussinavap}
+\end{figure} 
 
-\textbf{Electrical and Flow diagram of the system}
 
-diag diag diagggggg
+%\textbf{Electrical and Flow diagram of the system}
 
-\textbf{Limit}
+%diag diag diagggggg
+
+%\textbf{Limit}
 
 
 \section{Result}
@@ -373,7 +369,7 @@ To test mechanical properties, mechanical test tubes have been manufactured \ref
 \begin{figure}[h]
     \centering
     \includegraphics{images/mechanic1.jpg}
-    \caption{}
+    \caption{Empirical test bench}
     \label{fig:mechanic test machine}
 \end{figure} 
 
